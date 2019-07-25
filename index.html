@@ -23,13 +23,40 @@
 <body>
     <div id="root"></div>
 
+    
+
     <script type="text/babel">
 
         let country = "THAILAND";
 
+        let Hello = () => {
+            return (
+                <div>
+                     <h1 id="header" className="orange">hello {country} 55555 </h1>
+                </div>
+            )
+        }
+
+        let Loginform = () => {
+            return(
+                <div>
+                        <form action="" method="GET">
+        <label htmlFor="">userName: </label>
+        <input type="text" name="" id=""></input>
+        <label htmlFor="">passWord:</label>
+        <input type="password" name="" id=""></input>
+        <input type="button" value=""></input>
+    </form>
+                </div>
+            )
+
+        }
 
         ReactDOM.render(
-            <h1 id="header" className="orange">hello {country} </h1>,
+            <div>
+                    <Loginform/>
+                    <Loginform/>
+            </div>,
             document.getElementById("root")
             
         )
