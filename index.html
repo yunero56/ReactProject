@@ -29,10 +29,17 @@
 
         let country = "THAILAND";
 
-        let Hello = () => {
+        let Hello = (props) => {
+
+            console.log(props.textColor)
+            
+            let styleAble = {
+                color: props.textColor
+            }
+
             return (
                 <div>
-                     <h1 id="header" className="orange">hello {country} 55555 </h1>
+                     <h1 id="header" style={styleAble}>hello {props.name} 55555 </h1>
                 </div>
             )
         }
@@ -45,15 +52,25 @@
         <input type="text" name="" id=""></input>
         <label htmlFor="">passWord:</label>
         <input type="password" name="" id=""></input>
-        <input type="button" value=""></input>
+        <input type="button" value="submit"></input>
     </form>
                 </div>
             )
 
         }
 
+        const Hello1 = (props) => {
+        return (
+            <div className="blue">
+                <h1>Hello {props.library}</h1>
+                <p>{props.message}</p>
+            </div>
+        )
+    }
+
         ReactDOM.render(
             <div>
+            <Hello name="TLEJA" textColor="Yellow"/>
                     <Loginform/>
                     <Loginform/>
             </div>,
